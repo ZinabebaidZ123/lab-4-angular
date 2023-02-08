@@ -1,0 +1,21 @@
+
+<div class="card" style="width: 18rem;">
+    <img [src]="product.image" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{product.name}}</h5>
+      <span *ngIf = "checkCountGTZero() " >
+        <p class="text-success">stock</p>
+      </span>
+
+      <span *ngIf = "checkCountLTZero() " >
+        <p class="text-danger">out of stock</p>
+      </span>
+      
+      <p class="card-text">rate : {{product.rate}}</p>
+      <button class="btn btn-danger" (click) = "redirectToDetails()"> View Details</button>
+      
+    </div>
+     <div class="card-footer">
+         <small class="text-muted">{{product.createdAt | date : "MMM YYY"}}</small> 
+    </div> 
+  </div>

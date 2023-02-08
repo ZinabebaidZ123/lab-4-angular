@@ -1,0 +1,12 @@
+<div class="card shadow" style="width: 18rem;">
+    <img [src]="productInfo.image" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{productInfo.name}}</h5>
+      <p class="card-text">{{productInfo.description}}</p>
+      <button class="btn btn-danger" > View Details</button>
+      
+    </div>
+     <div class="card-footer">
+         <small class="text-muted">{{productInfo.createdAt | date : "MMM YYY"}}</small> 
+    </div> 
+  </div>
